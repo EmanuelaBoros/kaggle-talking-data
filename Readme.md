@@ -110,4 +110,21 @@ The script:
 5. Trains an XGBoost multiclass model.
 6. Writes a timestamped submission file.
 
+The output file is named like:
 
+```text
+submission_<score>_<YYYY-MM-DD-HH-MM>.csv
+```
+
+with columns:
+
+```text
+device_id,F23-,F24-26,F27-28,F29-32,F33-42,F43+,M22-,M23-26,M27-28,M29-31,M32-38,M39+
+```
+
+## Notes
+
+- The script is an experiment snapshot, not a packaged library.
+- Kaggle data is not included and must be downloaded separately.
+- `app_events.csv` and `app_labels.csv` are loaded but not currently used in the final feature matrix.
+- The active call is `run_xgb(...)`; switch the final section to `run_nn(...)` or `run_knn(...)` to try the alternative models.
