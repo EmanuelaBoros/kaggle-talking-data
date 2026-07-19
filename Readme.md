@@ -22,3 +22,21 @@ The output submission contains one probability column for each class.
 ├── simple_starter.py
 └── Readme.md
 ```
+
+## Expected Data Layout
+
+Kaggle data is not included in this repository. Download the competition files and place them in a local `data/` folder:
+
+```text
+data/
+├── gender_age_train.csv
+├── gender_age_test.csv
+├── phone_brand_device_model.csv
+├── events.csv
+├── app_events.csv
+└── app_labels.csv
+```
+
+`simple_starter.py` currently reads all of these files, although the active feature set mainly uses device metadata and event-level aggregates.
+
+
